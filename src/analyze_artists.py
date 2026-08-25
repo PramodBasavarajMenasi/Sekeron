@@ -54,6 +54,8 @@ def analyze_artist(inventory: ArtistInventory) -> CapabilityRecord:
 
     media_evidence, media_selection = sample_media_observations(inventory)
     for evidence in media_evidence:
+        if evidence.kind == "media_filename":
+            continue
         dimension = classify_dimension(inventory.category, evidence.claim)
         if dimension:
             demonstrated[dimension].append(evidence)

@@ -3,26 +3,30 @@
     "brief_id": "01_cafe_music_whatsapp",
     "source_file": "Data set\\hirer_conversations\\01_cafe_music_whatsapp.txt",
     "explicit_constraints": [
-      "18/08/26, 6:58 pm - Neha: What budget should we work with?"
+      "18/08/26, 6:58 pm - Neha: What budget should we work with?",
+      "Extracted budget value(s): 7k, 9k",
+      "Extracted date/timeline value(s): 18/08/26, next friday"
     ],
     "assumptions": [
       "No extra assumptions beyond the parsed brief"
     ],
-    "contradictions": [],
-    "unknowns": [
-      "Timeline is not specified"
+    "contradictions": [
+      "Brief mentions multiple different budget values"
     ],
+    "unknowns": [],
     "ranked_artists": [
       {
         "artist_id": "M04_KillRush",
         "name": "M04 KillRush",
         "category": "musicians",
-        "score": 42.62,
+        "score": 44.5,
         "reasons": [
           "Category fit: musicians",
-          "Profile claims overlap with requested terms: 3 match(es)"
+          "Profile claims overlap with requested terms: 3 match(es)",
+          "Budget considered from brief: 7k, 9k"
         ],
         "tradeoffs": [
+          "Date/timeline considered from brief: 18/08/26, next friday",
           "No evidence found for genre; No evidence found for mood",
           "Low confidence because media observations are placeholders or evidence is sparse"
         ],
@@ -31,26 +35,27 @@
           "demonstrated_evidence_fit": 0.0,
           "profile_claim_fit": 12.0,
           "format_style_fit": 5.0,
-          "uncertainty_penalty": -9.38
+          "uncertainty_penalty": -7.5
         }
       },
       {
-        "artist_id": "M01_Meera_Arjun",
-        "name": "M01 Meera Arjun",
+        "artist_id": "M02_Neon_Junction",
+        "name": "M02 Neon Junction",
         "category": "musicians",
-        "score": 42.5,
+        "score": 36.5,
         "reasons": [
           "Category fit: musicians",
-          "format: audio filename: filename suggests cafe, demo; requires human verification (Data set\\artist_profiles\\musicians\\M01_Meera_Arjun\\media\\MA_cafe_demo_take1.wav)",
-          "Profile claims overlap with requested terms: 1 match(es)"
+          "Profile claims overlap with requested terms: 1 match(es)",
+          "Budget considered from brief: 7k, 9k"
         ],
         "tradeoffs": [
-          "No evidence found for genre; No evidence found for instrumentation",
+          "Date/timeline considered from brief: 18/08/26, next friday",
+          "No evidence found for genre; No evidence found for mood",
           "Low confidence because media observations are placeholders or evidence is sparse"
         ],
         "score_breakdown": {
           "category_fit": 35.0,
-          "demonstrated_evidence_fit": 6.0,
+          "demonstrated_evidence_fit": 0.0,
           "profile_claim_fit": 4.0,
           "format_style_fit": 5.0,
           "uncertainty_penalty": -7.5
@@ -59,8 +64,8 @@
     ],
     "improve_your_matches": [
       {
-        "question": "What delivery date or event date should availability be checked against?",
-        "expected_ranking_impact": "Would not infer availability, but would highlight that the current ranking ignores scheduling risk."
+        "question": "Which capability matters most if two artists are close: style match, format, or category specialization?",
+        "expected_ranking_impact": "Would shift weight toward the selected capability and can swap close-ranked artists."
       }
     ],
     "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
@@ -69,8 +74,11 @@
     "source_file": "Data set\\follow_up_update\\01_cafe_music_update.txt",
     "explicit_constraints": [
       "18/08/26, 6:58 pm - Neha: What budget should we work with?",
+      "Extracted budget value(s): 7k, 9k",
+      "Extracted date/timeline value(s): 18/08/26, next friday",
       "20/08/26, 12:15 pm - Rhea: so we actually need a proper 45 min headline set, not background for 3 hours",
-      "20/08/26, 12:17 pm - Rhea: acoustic is still fine but it needs to feel like a performance/moment"
+      "20/08/26, 12:17 pm - Rhea: acoustic is still fine but it needs to feel like a performance/moment",
+      "Extracted budget value(s): rs 20, 15k"
     ],
     "desired_terms": [
       "acoustic"
@@ -81,41 +89,23 @@
     "source_file": "Data set\\follow_up_update\\01_cafe_music_update.txt",
     "explicit_constraints": [
       "18/08/26, 6:58 pm - Neha: What budget should we work with?",
+      "Extracted budget value(s): 7k, 9k",
+      "Extracted date/timeline value(s): 18/08/26, next friday",
       "20/08/26, 12:15 pm - Rhea: so we actually need a proper 45 min headline set, not background for 3 hours",
-      "20/08/26, 12:17 pm - Rhea: acoustic is still fine but it needs to feel like a performance/moment"
+      "20/08/26, 12:17 pm - Rhea: acoustic is still fine but it needs to feel like a performance/moment",
+      "Extracted budget value(s): rs 20, 15k"
     ],
     "assumptions": [
       "No extra assumptions beyond the parsed brief",
       "Use keyword overlap to infer the most likely category"
     ],
-    "contradictions": [],
+    "contradictions": [
+      "Brief mentions multiple different budget values"
+    ],
     "unknowns": [
-      "Requested artist category is not explicit",
-      "Budget is not specified"
+      "Requested artist category is not explicit"
     ],
     "ranked_artists": [
-      {
-        "artist_id": "M03_Raghav_Sen",
-        "name": "M03 Raghav Sen",
-        "category": "musicians",
-        "score": 63.12,
-        "reasons": [
-          "Category fit: musicians",
-          "genre: audio filename: filename suggests acoustic, folk; requires human verification (Data set\\artist_profiles\\musicians\\M03_Raghav_Sen\\media\\folk_acoustic-summer-walk-152722.mp3)",
-          "Profile claims overlap with requested terms: 1 match(es)"
-        ],
-        "tradeoffs": [
-          "No evidence found for mood; No evidence found for instrumentation",
-          "Low confidence because media observations are placeholders or evidence is sparse"
-        ],
-        "score_breakdown": {
-          "category_fit": 17.5,
-          "demonstrated_evidence_fit": 30.0,
-          "profile_claim_fit": 20.0,
-          "format_style_fit": 5.0,
-          "uncertainty_penalty": -9.38
-        }
-      },
       {
         "artist_id": "M01_Meera_Arjun",
         "name": "M01 Meera Arjun",
@@ -123,10 +113,35 @@
         "score": 33.12,
         "reasons": [
           "Category fit: musicians",
-          "Profile claims overlap with requested terms: 1 match(es)"
+          "Profile claims overlap with requested terms: 1 match(es)",
+          "Budget considered from brief: rs 20, 15k"
         ],
         "tradeoffs": [
-          "No evidence found for genre; No evidence found for instrumentation",
+          "Date/timeline considered from brief: 20/08/26",
+          "No evidence found for genre; No evidence found for mood",
+          "Low confidence because media observations are placeholders or evidence is sparse"
+        ],
+        "score_breakdown": {
+          "category_fit": 17.5,
+          "demonstrated_evidence_fit": 0.0,
+          "profile_claim_fit": 20.0,
+          "format_style_fit": 5.0,
+          "uncertainty_penalty": -9.38
+        }
+      },
+      {
+        "artist_id": "M03_Raghav_Sen",
+        "name": "M03 Raghav Sen",
+        "category": "musicians",
+        "score": 33.12,
+        "reasons": [
+          "Category fit: musicians",
+          "Profile claims overlap with requested terms: 1 match(es)",
+          "Budget considered from brief: rs 20, 15k"
+        ],
+        "tradeoffs": [
+          "Date/timeline considered from brief: 20/08/26",
+          "No evidence found for genre; No evidence found for mood",
           "Low confidence because media observations are placeholders or evidence is sparse"
         ],
         "score_breakdown": {
@@ -140,15 +155,15 @@
     ],
     "improve_your_matches": [
       {
-        "question": "What budget or rate range should the match optimize for?",
-        "expected_ranking_impact": "Could favor artists with explicit matching profile claims and penalize otherwise good matches with unknown commercial fit."
+        "question": "Which capability matters most if two artists are close: style match, format, or category specialization?",
+        "expected_ranking_impact": "Would shift weight toward the selected capability and can swap close-ranked artists."
       }
     ],
     "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
   },
   "what_changed_and_why": [
-    "Original top 2: ['M04_KillRush', 'M01_Meera_Arjun']; updated top 2: ['M03_Raghav_Sen', 'M01_Meera_Arjun'].",
+    "Original top 2: ['M04_KillRush', 'M02_Neon_Junction']; updated top 2: ['M01_Meera_Arjun', 'M03_Raghav_Sen'].",
     "Ranking changed because follow-up terms and constraints altered keyword overlap and uncertainty.",
-    "New explicit constraints considered: 18/08/26, 6:58 pm - Neha: What budget should we work with?; 20/08/26, 12:15 pm - Rhea: so we actually need a proper 45 min headline set, not background for 3 hours; 20/08/26, 12:17 pm - Rhea: acoustic is still fine but it needs to feel like a performance/moment"
+    "New explicit constraints considered: 18/08/26, 6:58 pm - Neha: What budget should we work with?; Extracted budget value(s): 7k, 9k; Extracted date/timeline value(s): 18/08/26, next friday"
   ]
 }

@@ -1,3 +1,10 @@
+"""Local media probes for conservative portfolio evidence.
+
+This module infers only style/technical signals (brightness, orientation,
+aspect ratio, audio/video duration). It must never infer reliability,
+punctuality, professionalism, or popularity.
+"""
+
 from __future__ import annotations
 
 import wave
@@ -14,20 +21,27 @@ def probe_image(path: Path, image_index: int, category: str) -> Evidence:
         with Image.open(path) as image:
             width, height = image.size
             orientation = orientation_label(width, height)
+            aspect = aspect_ratio_label(width, height)
             thumb = image.convert("L").resize((32, 32))
             brightness = ImageStat.Stat(thumb).mean[0]
             lighting = brightness_label(brightness)
             if category == "video_editors":
-                claim = f"supporting image asset probe: still image, {width}x{height}px; not treated as editing proof"
+                claim = (
+                    f"supporting image asset probe: still image, {width}x{height}px, "
+                    f"{aspect}; low-confidence heuristic, not semantic content recognition; "
+                    "not treated as editing proof"
+                )
             else:
                 claim = (
                     f"image content probe: {orientation} still image, "
-                    f"{width}x{height}px, {lighting} average luminance"
+                    f"{width}x{height}px, {lighting} average luminance, {aspect}; "
+                    "low-confidence heuristic, not semantic content recognition"
                 )
             metadata = {
                 "width": width,
                 "height": height,
                 "orientation": orientation,
+                "aspect_ratio_hint": aspect,
                 "average_luminance": round(brightness, 2),
                 "lighting_bucket": lighting,
             }
@@ -77,6 +91,7 @@ def probe_video(path: Path, category: str) -> list[Evidence]:
         height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT) or 0)
         duration = frames / fps if fps else None
         orientation = orientation_label(width, height)
+        aspect = aspect_ratio_label(width, height)
         stamps = sample_timestamps(duration)
         result = []
         for stamp in stamps:
@@ -84,9 +99,13 @@ def probe_video(path: Path, category: str) -> list[Evidence]:
             portfolio_format = video_portfolio_format(category)
             claim = (
                 f"video content probe: {orientation} {portfolio_format}, "
-                f"{width}x{height}px, {fps:.2f}fps, duration {duration:.1f}s, frame_index {frame_index}"
+                f"{width}x{height}px, {aspect}, {fps:.2f}fps, duration {duration:.1f}s, "
+                f"frame_index {frame_index}; low-confidence heuristic, not semantic content recognition"
                 if duration
-                else f"video content probe: {orientation} {portfolio_format}, {width}x{height}px, duration unavailable"
+                else (
+                    f"video content probe: {orientation} {portfolio_format}, {width}x{height}px, "
+                    f"{aspect}, duration unavailable; low-confidence heuristic, not semantic content recognition"
+                )
             )
             result.append(
                 Evidence(
@@ -100,6 +119,7 @@ def probe_video(path: Path, category: str) -> list[Evidence]:
                         "width": width,
                         "height": height,
                         "orientation": orientation,
+                        "aspect_ratio_hint": aspect,
                         "fps": round(fps, 3) if fps else None,
                         "frame_count": int(frames) if frames else None,
                         "duration_seconds": round(duration, 3) if duration else None,
@@ -185,6 +205,17 @@ def orientation_label(width: int, height: int) -> str:
     if width > height:
         return "horizontal"
     return "square"
+
+
+def aspect_ratio_label(width: int, height: int) -> str:
+    if width <= 0 or height <= 0:
+        return "unknown aspect-ratio composition hint"
+    ratio = width / height
+    if 0.95 <= ratio <= 1.05:
+        return "square aspect-ratio composition hint"
+    if ratio < 0.95:
+        return "portrait aspect-ratio composition hint"
+    return "landscape aspect-ratio composition hint"
 
 
 def brightness_label(value: float) -> str:

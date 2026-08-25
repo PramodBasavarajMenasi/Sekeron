@@ -69,10 +69,18 @@ def score_artist(brief: Brief, artist: CapabilityRecord) -> RankedArtist:
     reasons.extend(evidence_reasons[:3])
     if profile_hits:
         reasons.append(f"Profile claims overlap with requested terms: {profile_hits} match(es)")
+    if brief.extracted_values.get("budget"):
+        reasons.append(f"Budget considered from brief: {brief.extracted_values['budget']}")
+    if brief.extracted_values.get("date"):
+        tradeoff_context = f"Date/timeline considered from brief: {brief.extracted_values['date']}"
+    else:
+        tradeoff_context = ""
     if not reasons:
         reasons.append("Ranked mainly because alternatives had weaker category or evidence fit")
 
     tradeoffs = []
+    if tradeoff_context:
+        tradeoffs.append(tradeoff_context)
     if artist.unknowns:
         tradeoffs.append("; ".join(artist.unknowns[:2]))
     if artist.confidence == "low":

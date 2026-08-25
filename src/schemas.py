@@ -67,6 +67,7 @@ class Brief:
     assumptions: list[str]
     unknowns: list[str]
     contradictions: list[str]
+    extracted_values: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass

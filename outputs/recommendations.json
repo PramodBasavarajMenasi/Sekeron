@@ -5,26 +5,30 @@
       "brief_id": "01_cafe_music_whatsapp",
       "source_file": "Data set\\hirer_conversations\\01_cafe_music_whatsapp.txt",
       "explicit_constraints": [
-        "18/08/26, 6:58 pm - Neha: What budget should we work with?"
+        "18/08/26, 6:58 pm - Neha: What budget should we work with?",
+        "Extracted budget value(s): 7k, 9k",
+        "Extracted date/timeline value(s): 18/08/26, next friday"
       ],
       "assumptions": [
         "No extra assumptions beyond the parsed brief"
       ],
-      "contradictions": [],
-      "unknowns": [
-        "Timeline is not specified"
+      "contradictions": [
+        "Brief mentions multiple different budget values"
       ],
+      "unknowns": [],
       "ranked_artists": [
         {
           "artist_id": "M04_KillRush",
           "name": "M04 KillRush",
           "category": "musicians",
-          "score": 42.62,
+          "score": 44.5,
           "reasons": [
             "Category fit: musicians",
-            "Profile claims overlap with requested terms: 3 match(es)"
+            "Profile claims overlap with requested terms: 3 match(es)",
+            "Budget considered from brief: 7k, 9k"
           ],
           "tradeoffs": [
+            "Date/timeline considered from brief: 18/08/26, next friday",
             "No evidence found for genre; No evidence found for mood",
             "Low confidence because media observations are placeholders or evidence is sparse"
           ],
@@ -33,26 +37,27 @@
             "demonstrated_evidence_fit": 0.0,
             "profile_claim_fit": 12.0,
             "format_style_fit": 5.0,
-            "uncertainty_penalty": -9.38
+            "uncertainty_penalty": -7.5
           }
         },
         {
-          "artist_id": "M01_Meera_Arjun",
-          "name": "M01 Meera Arjun",
+          "artist_id": "M02_Neon_Junction",
+          "name": "M02 Neon Junction",
           "category": "musicians",
-          "score": 42.5,
+          "score": 36.5,
           "reasons": [
             "Category fit: musicians",
-            "format: audio filename: filename suggests cafe, demo; requires human verification (Data set\\artist_profiles\\musicians\\M01_Meera_Arjun\\media\\MA_cafe_demo_take1.wav)",
-            "Profile claims overlap with requested terms: 1 match(es)"
+            "Profile claims overlap with requested terms: 1 match(es)",
+            "Budget considered from brief: 7k, 9k"
           ],
           "tradeoffs": [
-            "No evidence found for genre; No evidence found for instrumentation",
+            "Date/timeline considered from brief: 18/08/26, next friday",
+            "No evidence found for genre; No evidence found for mood",
             "Low confidence because media observations are placeholders or evidence is sparse"
           ],
           "score_breakdown": {
             "category_fit": 35.0,
-            "demonstrated_evidence_fit": 6.0,
+            "demonstrated_evidence_fit": 0.0,
             "profile_claim_fit": 4.0,
             "format_style_fit": 5.0,
             "uncertainty_penalty": -7.5
@@ -61,8 +66,8 @@
       ],
       "improve_your_matches": [
         {
-          "question": "What delivery date or event date should availability be checked against?",
-          "expected_ranking_impact": "Would not infer availability, but would highlight that the current ranking ignores scheduling risk."
+          "question": "Which capability matters most if two artists are close: style match, format, or category specialization?",
+          "expected_ranking_impact": "Would shift weight toward the selected capability and can swap close-ranked artists."
         }
       ],
       "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
@@ -74,7 +79,8 @@
         "How many final images do you need, and when?",
         "website + insta, so square and vertical crops",
         "would need selects in 2 days",
-        "budget about 18k with basic retouching"
+        "budget about 18k with basic retouching",
+        "Extracted date/timeline value(s): next week"
       ],
       "assumptions": [
         "No extra assumptions beyond the parsed brief"
@@ -86,14 +92,16 @@
           "artist_id": "P02_Kabir_Mehta",
           "name": "P02 Kabir Mehta",
           "category": "photographers",
-          "score": 47.03,
+          "score": 48.91,
           "reasons": [
             "Category fit: photographers",
-            "lighting: image content probe: vertical still image, 1440x1800px, balanced-light average luminance (Data set\\artist_profiles\\photographers\\P02_Kabir_Mehta\\media\\581888523_18149152837419095_6510529012749050816_n.jpg)",
-            "Profile claims overlap with requested terms: 3 match(es)"
+            "subject: image content probe: vertical still image, 1440x1800px, balanced-light average luminance, portrait aspect-ratio composition hint; low-confidence heuristic, not semantic content recognition (Data set\\artist_profiles\\photographers\\P02_Kabir_Mehta\\media\\581888523_18149152837419095_6510529012749050816_n.jpg)",
+            "Profile claims overlap with requested terms: 3 match(es)",
+            "Budget considered from brief: 18k"
           ],
           "tradeoffs": [
-            "No evidence found for subject; No evidence found for style",
+            "Date/timeline considered from brief: next week",
+            "No evidence found for style; No evidence found for composition",
             "Low confidence because media observations are placeholders or evidence is sparse"
           ],
           "score_breakdown": {
@@ -101,21 +109,23 @@
             "demonstrated_evidence_fit": 4.29,
             "profile_claim_fit": 8.57,
             "format_style_fit": 6.67,
-            "uncertainty_penalty": -7.5
+            "uncertainty_penalty": -5.62
           }
         },
         {
           "artist_id": "PO5_Frames",
           "name": "PO5 Frames",
           "category": "photographers",
-          "score": 47.03,
+          "score": 48.91,
           "reasons": [
             "Category fit: photographers",
-            "lighting: image content probe: vertical still image, 2725x3631px, balanced-light average luminance (Data set\\artist_profiles\\photographers\\PO5_Frames\\media\\20250811T215431642ZUTCf01f13d7-c534-4067-bb63-f24ba353158e.jpg)",
-            "Profile claims overlap with requested terms: 3 match(es)"
+            "subject: image content probe: vertical still image, 2725x3631px, balanced-light average luminance, portrait aspect-ratio composition hint; low-confidence heuristic, not semantic content recognition (Data set\\artist_profiles\\photographers\\PO5_Frames\\media\\20250811T215431642ZUTCf01f13d7-c534-4067-bb63-f24ba353158e.jpg)",
+            "Profile claims overlap with requested terms: 3 match(es)",
+            "Budget considered from brief: 18k"
           ],
           "tradeoffs": [
-            "No evidence found for subject; No evidence found for style",
+            "Date/timeline considered from brief: next week",
+            "No evidence found for style; No evidence found for composition",
             "Low confidence because media observations are placeholders or evidence is sparse"
           ],
           "score_breakdown": {
@@ -123,7 +133,7 @@
             "demonstrated_evidence_fit": 4.29,
             "profile_claim_fit": 8.57,
             "format_style_fit": 6.67,
-            "uncertainty_penalty": -7.5
+            "uncertainty_penalty": -5.62
           }
         }
       ],
@@ -149,7 +159,9 @@
       "assumptions": [
         "No extra assumptions beyond the parsed brief"
       ],
-      "contradictions": [],
+      "contradictions": [
+        "Brief mentions multiple different budget values"
+      ],
       "unknowns": [],
       "ranked_artists": [
         {
@@ -159,10 +171,12 @@
           "score": 53.95,
           "reasons": [
             "Category fit: video_editors",
-            "platform_format: video content probe: vertical video-edit portfolio format, 720x1280px, 24.00fps, duration 35.6s, frame_index 0 (Data set\\artist_profiles\\video_editors\\V01_Nisha_Kapoor\\media\\Video-11391.mp4)",
-            "Profile claims overlap with requested terms: 4 match(es)"
+            "platform_format: video content probe: vertical video-edit portfolio format, 720x1280px, portrait aspect-ratio composition hint, 24.00fps, duration 35.6s, frame_index 0; low-confidence heuristic, not semantic content recognition (Data set\\artist_profiles\\video_editors\\V01_Nisha_Kapoor\\media\\Video-11391.mp4)",
+            "Profile claims overlap with requested terms: 4 match(es)",
+            "Budget considered from brief: 10k, 8"
           ],
           "tradeoffs": [
+            "Date/timeline considered from brief: Wednesday, friday, 3-4",
             "No evidence found for pacing; No evidence found for storytelling",
             "Low confidence because media observations are placeholders or evidence is sparse"
           ],
@@ -175,26 +189,27 @@
           }
         },
         {
-          "artist_id": "VO5_Roshan",
-          "name": "VO5 Roshan",
+          "artist_id": "V02_Rehman_Ali",
+          "name": "V02 Rehman Ali",
           "category": "video_editors",
-          "score": 51.25,
+          "score": 40.62,
           "reasons": [
             "Category fit: video_editors",
-            "storytelling: video filename: filename suggests event; requires human verification (Data set\\artist_profiles\\video_editors\\VO5_Roshan\\media\\4320_Samsung_Event_Videography.mp4)",
-            "platform_format: video content probe: vertical video-edit portfolio format, 360x640px, 30.00fps, duration 75.0s, frame_index 0 (Data set\\artist_profiles\\video_editors\\VO5_Roshan\\media\\4320_Samsung_Event_Videography.mp4)",
-            "Profile claims overlap with requested terms: 1 match(es)"
+            "platform_format: video content probe: vertical video-edit portfolio format, 720x1280px, portrait aspect-ratio composition hint, 30.00fps, duration 16.6s, frame_index 0; low-confidence heuristic, not semantic content recognition (Data set\\artist_profiles\\video_editors\\V02_Rehman_Ali\\media\\Video-23970.mp4)",
+            "Profile claims overlap with requested terms: 2 match(es)",
+            "Budget considered from brief: 10k, 8"
           ],
           "tradeoffs": [
-            "No evidence found for transitions; No evidence found for motion_graphics",
+            "Date/timeline considered from brief: Wednesday, friday, 3-4",
+            "No evidence found for pacing; No evidence found for storytelling",
             "Low confidence because media observations are placeholders or evidence is sparse"
           ],
           "score_breakdown": {
             "category_fit": 35.0,
-            "demonstrated_evidence_fit": 10.0,
-            "profile_claim_fit": 3.33,
-            "format_style_fit": 6.67,
-            "uncertainty_penalty": -3.75
+            "demonstrated_evidence_fit": 5.0,
+            "profile_claim_fit": 6.67,
+            "format_style_fit": 3.33,
+            "uncertainty_penalty": -9.38
           }
         }
       ],
@@ -221,37 +236,16 @@
       "unknowns": [],
       "ranked_artists": [
         {
-          "artist_id": "P01_Aanya_Rao",
-          "name": "P01 Aanya Rao",
-          "category": "photographers",
-          "score": 49.5,
-          "reasons": [
-            "Category fit: photographers",
-            "Profile claims overlap with requested terms: 3 match(es)"
-          ],
-          "tradeoffs": [
-            "No evidence found for subject; No evidence found for style",
-            "Low confidence because media observations are placeholders or evidence is sparse"
-          ],
-          "score_breakdown": {
-            "category_fit": 35.0,
-            "demonstrated_evidence_fit": 0.0,
-            "profile_claim_fit": 12.0,
-            "format_style_fit": 10.0,
-            "uncertainty_penalty": -7.5
-          }
-        },
-        {
           "artist_id": "PO4_Drift",
           "name": "PO4 Drift",
           "category": "photographers",
-          "score": 49.5,
+          "score": 51.38,
           "reasons": [
             "Category fit: photographers",
             "Profile claims overlap with requested terms: 3 match(es)"
           ],
           "tradeoffs": [
-            "No evidence found for subject; No evidence found for style",
+            "No evidence found for style; No evidence found for composition",
             "Low confidence because media observations are placeholders or evidence is sparse"
           ],
           "score_breakdown": {
@@ -259,7 +253,28 @@
             "demonstrated_evidence_fit": 0.0,
             "profile_claim_fit": 12.0,
             "format_style_fit": 10.0,
-            "uncertainty_penalty": -7.5
+            "uncertainty_penalty": -5.62
+          }
+        },
+        {
+          "artist_id": "PO5_Frames",
+          "name": "PO5 Frames",
+          "category": "photographers",
+          "score": 51.38,
+          "reasons": [
+            "Category fit: photographers",
+            "Profile claims overlap with requested terms: 3 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for style; No evidence found for composition",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 0.0,
+            "profile_claim_fit": 12.0,
+            "format_style_fit": 10.0,
+            "uncertainty_penalty": -5.62
           }
         }
       ],
