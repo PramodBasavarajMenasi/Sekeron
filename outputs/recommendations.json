@@ -1,0 +1,275 @@
+{
+  "dataset_root": "Data set",
+  "recommendations": [
+    {
+      "brief_id": "01_cafe_music_whatsapp",
+      "source_file": "Data set\\hirer_conversations\\01_cafe_music_whatsapp.txt",
+      "explicit_constraints": [
+        "18/08/26, 6:58 pm - Neha: What budget should we work with?"
+      ],
+      "assumptions": [
+        "No extra assumptions beyond the parsed brief"
+      ],
+      "contradictions": [],
+      "unknowns": [
+        "Timeline is not specified"
+      ],
+      "ranked_artists": [
+        {
+          "artist_id": "M04_KillRush",
+          "name": "M04 KillRush",
+          "category": "musicians",
+          "score": 42.62,
+          "reasons": [
+            "Category fit: musicians",
+            "Profile claims overlap with requested terms: 3 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for genre; No evidence found for mood",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 0.0,
+            "profile_claim_fit": 12.0,
+            "format_style_fit": 5.0,
+            "uncertainty_penalty": -9.38
+          }
+        },
+        {
+          "artist_id": "M01_Meera_Arjun",
+          "name": "M01 Meera Arjun",
+          "category": "musicians",
+          "score": 42.5,
+          "reasons": [
+            "Category fit: musicians",
+            "format: audio filename: filename suggests cafe, demo; requires human verification (Data set\\artist_profiles\\musicians\\M01_Meera_Arjun\\media\\MA_cafe_demo_take1.wav)",
+            "Profile claims overlap with requested terms: 1 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for genre; No evidence found for instrumentation",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 6.0,
+            "profile_claim_fit": 4.0,
+            "format_style_fit": 5.0,
+            "uncertainty_penalty": -7.5
+          }
+        }
+      ],
+      "improve_your_matches": [
+        {
+          "question": "What delivery date or event date should availability be checked against?",
+          "expected_ranking_impact": "Would not infer availability, but would highlight that the current ranking ignores scheduling risk."
+        }
+      ],
+      "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
+    },
+    {
+      "brief_id": "02_skincare_photography_chat",
+      "source_file": "Data set\\hirer_conversations\\02_skincare_photography_chat.txt",
+      "explicit_constraints": [
+        "How many final images do you need, and when?",
+        "website + insta, so square and vertical crops",
+        "would need selects in 2 days",
+        "budget about 18k with basic retouching"
+      ],
+      "assumptions": [
+        "No extra assumptions beyond the parsed brief"
+      ],
+      "contradictions": [],
+      "unknowns": [],
+      "ranked_artists": [
+        {
+          "artist_id": "P02_Kabir_Mehta",
+          "name": "P02 Kabir Mehta",
+          "category": "photographers",
+          "score": 47.03,
+          "reasons": [
+            "Category fit: photographers",
+            "lighting: image content probe: vertical still image, 1440x1800px, balanced-light average luminance (Data set\\artist_profiles\\photographers\\P02_Kabir_Mehta\\media\\581888523_18149152837419095_6510529012749050816_n.jpg)",
+            "Profile claims overlap with requested terms: 3 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for subject; No evidence found for style",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 4.29,
+            "profile_claim_fit": 8.57,
+            "format_style_fit": 6.67,
+            "uncertainty_penalty": -7.5
+          }
+        },
+        {
+          "artist_id": "PO5_Frames",
+          "name": "PO5 Frames",
+          "category": "photographers",
+          "score": 47.03,
+          "reasons": [
+            "Category fit: photographers",
+            "lighting: image content probe: vertical still image, 2725x3631px, balanced-light average luminance (Data set\\artist_profiles\\photographers\\PO5_Frames\\media\\20250811T215431642ZUTCf01f13d7-c534-4067-bb63-f24ba353158e.jpg)",
+            "Profile claims overlap with requested terms: 3 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for subject; No evidence found for style",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 4.29,
+            "profile_claim_fit": 8.57,
+            "format_style_fit": 6.67,
+            "uncertainty_penalty": -7.5
+          }
+        }
+      ],
+      "improve_your_matches": [
+        {
+          "question": "Which capability matters most if two artists are close: style match, format, or category specialization?",
+          "expected_ranking_impact": "Would shift weight toward the selected capability and can swap close-ranked artists."
+        }
+      ],
+      "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
+    },
+    {
+      "brief_id": "03_vertical_video_email",
+      "source_file": "Data set\\hirer_conversations\\03_vertical_video_email.txt",
+      "explicit_constraints": [
+        "Subject: need reel editor by friday",
+        "Need one good vertical reel from it, around 30 sec",
+        "We need the editor to go through it and find the story, not just put every clip in order",
+        "Budget 8-10k",
+        "I don’t know if we can legally use that song on Instagram so the editor may need to suggest something else",
+        "Hi Manu — do you need more than one aspect ratio or a shorter cut as well?"
+      ],
+      "assumptions": [
+        "No extra assumptions beyond the parsed brief"
+      ],
+      "contradictions": [],
+      "unknowns": [],
+      "ranked_artists": [
+        {
+          "artist_id": "V01_Nisha_Kapoor",
+          "name": "V01 Nisha Kapoor",
+          "category": "video_editors",
+          "score": 53.95,
+          "reasons": [
+            "Category fit: video_editors",
+            "platform_format: video content probe: vertical video-edit portfolio format, 720x1280px, 24.00fps, duration 35.6s, frame_index 0 (Data set\\artist_profiles\\video_editors\\V01_Nisha_Kapoor\\media\\Video-11391.mp4)",
+            "Profile claims overlap with requested terms: 4 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for pacing; No evidence found for storytelling",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 5.0,
+            "profile_claim_fit": 13.33,
+            "format_style_fit": 10.0,
+            "uncertainty_penalty": -9.38
+          }
+        },
+        {
+          "artist_id": "VO5_Roshan",
+          "name": "VO5 Roshan",
+          "category": "video_editors",
+          "score": 51.25,
+          "reasons": [
+            "Category fit: video_editors",
+            "storytelling: video filename: filename suggests event; requires human verification (Data set\\artist_profiles\\video_editors\\VO5_Roshan\\media\\4320_Samsung_Event_Videography.mp4)",
+            "platform_format: video content probe: vertical video-edit portfolio format, 360x640px, 30.00fps, duration 75.0s, frame_index 0 (Data set\\artist_profiles\\video_editors\\VO5_Roshan\\media\\4320_Samsung_Event_Videography.mp4)",
+            "Profile claims overlap with requested terms: 1 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for transitions; No evidence found for motion_graphics",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 10.0,
+            "profile_claim_fit": 3.33,
+            "format_style_fit": 6.67,
+            "uncertainty_penalty": -3.75
+          }
+        }
+      ],
+      "improve_your_matches": [
+        {
+          "question": "Which capability matters most if two artists are close: style match, format, or category specialization?",
+          "expected_ranking_impact": "Would shift weight toward the selected capability and can swap close-ranked artists."
+        }
+      ],
+      "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
+    },
+    {
+      "brief_id": "04_leadership_event_photos",
+      "source_file": "Data set\\hirer_conversations\\04_leadership_event_photos.txt",
+      "explicit_constraints": [
+        "I told her this might need a separate setup/time, and she said candid event coverage is more important if both are not realistic",
+        "Needs 8–10 pictures the same evening for LinkedIn",
+        "No fixed budget shared"
+      ],
+      "assumptions": [
+        "No extra assumptions beyond the parsed brief"
+      ],
+      "contradictions": [],
+      "unknowns": [],
+      "ranked_artists": [
+        {
+          "artist_id": "P01_Aanya_Rao",
+          "name": "P01 Aanya Rao",
+          "category": "photographers",
+          "score": 49.5,
+          "reasons": [
+            "Category fit: photographers",
+            "Profile claims overlap with requested terms: 3 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for subject; No evidence found for style",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 0.0,
+            "profile_claim_fit": 12.0,
+            "format_style_fit": 10.0,
+            "uncertainty_penalty": -7.5
+          }
+        },
+        {
+          "artist_id": "PO4_Drift",
+          "name": "PO4 Drift",
+          "category": "photographers",
+          "score": 49.5,
+          "reasons": [
+            "Category fit: photographers",
+            "Profile claims overlap with requested terms: 3 match(es)"
+          ],
+          "tradeoffs": [
+            "No evidence found for subject; No evidence found for style",
+            "Low confidence because media observations are placeholders or evidence is sparse"
+          ],
+          "score_breakdown": {
+            "category_fit": 35.0,
+            "demonstrated_evidence_fit": 0.0,
+            "profile_claim_fit": 12.0,
+            "format_style_fit": 10.0,
+            "uncertainty_penalty": -7.5
+          }
+        }
+      ],
+      "improve_your_matches": [
+        {
+          "question": "Which capability matters most if two artists are close: style match, format, or category specialization?",
+          "expected_ranking_impact": "Would shift weight toward the selected capability and can swap close-ranked artists."
+        }
+      ],
+      "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
+    }
+  ]
+}
