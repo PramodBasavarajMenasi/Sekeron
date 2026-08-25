@@ -39,8 +39,8 @@
         }
       },
       {
-        "artist_id": "M02_Neon_Junction",
-        "name": "M02 Neon Junction",
+        "artist_id": "M05_Lunar_Noise",
+        "name": "M05 Lunar Noise",
         "category": "musicians",
         "score": 36.5,
         "reasons": [
@@ -130,8 +130,8 @@
         }
       },
       {
-        "artist_id": "M03_Raghav_Sen",
-        "name": "M03 Raghav Sen",
+        "artist_id": "M04_KillRush",
+        "name": "M04 KillRush",
         "category": "musicians",
         "score": 33.12,
         "reasons": [
@@ -162,7 +162,7 @@
     "expected_ranking_impact": "More category, format, budget, and deadline detail can change close rankings by reducing uncertainty penalties."
   },
   "what_changed_and_why": [
-    "Original top 2: ['M04_KillRush', 'M02_Neon_Junction']; updated top 2: ['M01_Meera_Arjun', 'M03_Raghav_Sen'].",
+    "Original top 2: ['M04_KillRush', 'M05_Lunar_Noise']; updated top 2: ['M01_Meera_Arjun', 'M04_KillRush'].",
     "Ranking changed because follow-up terms and constraints altered keyword overlap and uncertainty.",
     "New explicit constraints considered: 18/08/26, 6:58 pm - Neha: What budget should we work with?; Extracted budget value(s): 7k, 9k; Extracted date/timeline value(s): 18/08/26, next friday"
   ]

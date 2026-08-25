@@ -24,13 +24,6 @@ pip install -r requirements.txt
 python -m src.main --data "Data set" --out outputs
 ```
 
-If your machine uses a different Python launcher:
-
-```bash
-python3 -m src.main --data "Data set" --out outputs
-py -3 -m src.main --data "Data set" --out outputs
-```
-
 The code also supports the prompt's generic structure:
 
 ```text

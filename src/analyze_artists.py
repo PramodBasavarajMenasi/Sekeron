@@ -62,6 +62,7 @@ def analyze_artist(inventory: ArtistInventory) -> CapabilityRecord:
 
     dimensions = CATEGORY_DIMENSIONS.get(inventory.category, [])
     unknowns = [f"No evidence found for {dimension}" for dimension in dimensions if not demonstrated.get(dimension)]
+    unknowns.extend(media_probe_unknowns(media_evidence))
     unknowns.extend(damaged[:3])
     confidence = confidence_label(profile_claims, demonstrated, damaged)
 
@@ -167,6 +168,18 @@ def classify_dimension(category: str, text: str) -> str | None:
         if any(term.replace("-", " ") in lower for term in terms):
             return dimension
     return None
+
+
+def media_probe_unknowns(evidence_items: list[Evidence]) -> list[str]:
+    flagged_files = []
+    for evidence in evidence_items:
+        if evidence.kind != "media_probe":
+            continue
+        lower = evidence.claim.lower()
+        if "duration unavailable" in lower or "probe unavailable" in lower:
+            flagged_files.append(evidence.source_file)
+    unique_files = list(dict.fromkeys(flagged_files))
+    return [f"Media probe incomplete or unavailable for {path}" for path in unique_files[:3]]
 
 
 def confidence_label(profile_claims: list[Evidence], demonstrated: dict[str, list[Evidence]], damaged: list[str]) -> str:
